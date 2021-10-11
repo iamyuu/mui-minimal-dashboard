@@ -2,7 +2,7 @@
 import Router from './routes';
 // theme
 import ThemeConfig from './theme';
-import GlobalStyles from './theme/globalStyles';
+import GlobalStyles from './theme/global-styles';
 // components
 import ScrollToTop from './components/ScrollToTop';
 import { BaseOptionChartStyle } from './components/charts/BaseOptionChart';

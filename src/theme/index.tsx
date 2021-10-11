@@ -1,8 +1,12 @@
-import PropTypes from 'prop-types';
 import { useMemo } from 'react';
 // material
 import { CssBaseline } from '@mui/material';
-import { ThemeProvider, createTheme, StyledEngineProvider } from '@mui/material/styles';
+import {
+  ThemeProvider,
+  createTheme,
+  StyledEngineProvider,
+  ThemeOptions
+} from '@mui/material/styles';
 //
 import shape from './shape';
 import palette from './palette';
@@ -12,17 +16,17 @@ import shadows, { customShadows } from './shadows';
 
 // ----------------------------------------------------------------------
 
-ThemeConfig.propTypes = {
-  children: PropTypes.node
-};
+interface ThemeConfigProps {
+  children: React.ReactNode;
+}
 
-export default function ThemeConfig({ children }) {
-  const themeOptions = useMemo(
+export default function ThemeConfig({ children }: ThemeConfigProps) {
+  const themeOptions = useMemo<ThemeOptions>(
     () => ({
       palette,
       shape,
-      typography,
-      shadows,
+      ...typography,
+      ...shadows,
       customShadows
     }),
     []
