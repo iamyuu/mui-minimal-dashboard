@@ -2,12 +2,10 @@ import { Link as RouterLink } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
 import { Box, Button, Typography, Container } from '@mui/material';
-// components
-import Page from '../components/Page';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled(Page)(({ theme }) => ({
+const RootStyle = styled('div')(({ theme }) => ({
   display: 'flex',
   minHeight: '100%',
   alignItems: 'center',
