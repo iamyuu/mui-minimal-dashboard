@@ -21,22 +21,22 @@ export function BaseOptionChartStyle() {
           '.apexcharts-xaxistooltip': {
             ...background,
             border: 0,
-            boxShadow: theme.customShadows.z24,
+            // boxShadow: theme.customShadows.z24, // TODO
             color: theme.palette.text.primary,
-            borderRadius: theme.shape.borderRadiusSm,
+            // borderRadius: theme.shape.borderRadiusSm, // TODO
             '&:before': { borderBottomColor: 'transparent' },
             '&:after': { borderBottomColor: alpha(theme.palette.background.default, 0.72) }
           },
           '.apexcharts-tooltip.apexcharts-theme-light': {
             ...background,
             border: 0,
-            boxShadow: theme.customShadows.z24,
-            borderRadius: theme.shape.borderRadiusSm,
+            // boxShadow: theme.customShadows.z24, // TODO
+            // borderRadius: theme.shape.borderRadiusSm, // TODO
             '& .apexcharts-tooltip-title': {
               border: 0,
               textAlign: 'center',
               fontWeight: theme.typography.fontWeightBold,
-              backgroundColor: theme.palette.grey[500_16],
+              // backgroundColor: theme.palette.grey[500_16], // TODO
               color: theme.palette.text[theme.palette.mode === 'light' ? 'secondary' : 'primary']
             }
           },
@@ -80,12 +80,13 @@ export default function BaseOptionChart() {
   return {
     // Colors
     colors: [
-      theme.palette.primary.main,
-      theme.palette.chart.yellow[0],
-      theme.palette.chart.blue[0],
-      theme.palette.chart.violet[0],
-      theme.palette.chart.green[0],
-      theme.palette.chart.red[0]
+      theme.palette.primary.main
+      // TODO:
+      // theme.palette.chart.yellow[0],
+      // theme.palette.chart.blue[0],
+      // theme.palette.chart.violet[0],
+      // theme.palette.chart.green[0],
+      // theme.palette.chart.red[0]
     ],
 
     // Chart
@@ -196,8 +197,9 @@ export default function BaseOptionChart() {
       // Radialbar
       radialBar: {
         track: {
-          strokeWidth: '100%',
-          background: theme.palette.grey[500_16]
+          strokeWidth: '100%'
+          // TODO:
+          // background: theme.palette.grey[500_16]
         },
         dataLabels: {
           value: LABEL_VALUE,
