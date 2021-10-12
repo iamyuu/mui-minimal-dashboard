@@ -1,5 +1,4 @@
 import faker from 'faker';
-import PropTypes from 'prop-types';
 import { noCase } from 'change-case';
 import { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
@@ -81,7 +80,7 @@ const NOTIFICATIONS = [
   }
 ];
 
-function renderContent(notification) {
+function renderContent(notification: typeof NOTIFICATIONS[0]) {
   const title = (
     <Typography variant="subtitle2">
       {notification.title}
@@ -116,16 +115,16 @@ function renderContent(notification) {
     };
   }
   return {
-    avatar: <img alt={notification.title} src={notification.avatar} />,
+    avatar: <img alt={notification.title} src={notification.avatar || ''} />,
     title
   };
 }
 
-NotificationItem.propTypes = {
-  notification: PropTypes.object.isRequired
-};
+interface NotificationItemProps {
+  notification: typeof NOTIFICATIONS[0];
+}
 
-function NotificationItem({ notification }) {
+function NotificationItem({ notification }: NotificationItemProps) {
   const { avatar, title } = renderContent(notification);
 
   return (
